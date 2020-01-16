@@ -122,8 +122,23 @@
             </div>
           </form>
         </div> -->
-        <div class="col-md-12 align-items-stretch d-flex" style="height: 500px;">
-          <iframe height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCeS0Opg0joARGPkC7490_a8&key=AIzaSyBLXKZ35fmik1AQ6nQ6u099yo10mcf1-6U" allowfullscreen></iframe>
+        <style>
+          .google-maps {
+              position: relative;
+              padding-bottom: 55%; // This is the aspect ratio
+              height: 0;
+              overflow: hidden;
+          }
+          .google-maps iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100% !important;
+              height: 100% !important;
+          }
+      </style>
+        <div class="col-md-12 align-items-stretch d-flex google-maps" style="height: 500px;">
+          <iframe width="900" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCeS0Opg0joARGPkC7490_a8&key=AIzaSyBLXKZ35fmik1AQ6nQ6u099yo10mcf1-6U" allowfullscreen></iframe>
         </div>
       </div>
     </div>
