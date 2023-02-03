@@ -157,6 +157,11 @@
             height: 100% !important;
           }
         </style>
+        <script>
+          window.initMap = function () {
+            window.initMap = null; //set this to null this so that it can't get called anymore....
+          };
+        </script>
         <div class="col-md-12 align-items-stretch d-flex google-maps" style="height: 500px;">
           <iframe width="900" height="500" frameborder="0" style="border:0" title="map"
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJjyEIJJg0joARNv2j-zjkiso&key=AIzaSyBLXKZ35fmik1AQ6nQ6u099yo10mcf1-6U"
@@ -292,7 +297,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLXKZ35fmik1AQ6nQ6u099yo10mcf1-6U"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLXKZ35fmik1AQ6nQ6u099yo10mcf1-6U&sensor=false&callback=initMap"></script>
 
   <script src="js/main.js"></script>
 
